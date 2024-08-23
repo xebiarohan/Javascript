@@ -85,3 +85,5 @@
     - If we want to execute the script when ever it get laoded, irirespective to the laoding status of the HTML code then we use async
         - <script src="" async></script>
     - in async the order of the script is not guranteed
+
+19. Best reference website for Javascript : MDN Web Docs

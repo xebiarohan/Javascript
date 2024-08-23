@@ -22,42 +22,50 @@ function writeToLog(operationIdentifier, prevResult, operationNumber, newResult)
       console.log(logEntries);
 }
 
-function add() {
+function calculateResult(type) {
   const userInput = getUserInput();
   const currentValue = currenResult;
-  currenResult += userInput;
-  createAndWriteOutput('+', currentValue, userInput);
-  writeToLog('Add', currentValue, userInput, currenResult);
+  let mathOperator
+
+  if(!userInput) {
+    return;
+  }
+
+  if(type === 'ADD') {
+    currenResult += userInput;
+    mathOperator = '+'
+  } else if(type === 'SUBTRACT') {
+    currenResult -= userInput;
+    mathOperator = '-';
+
+  } else if(type === 'MULTIPLY') {
+    currenResult *= userInput;
+    mathOperator = '*';
+
+  } else {
+    currenResult /= userInput;
+    mathOperator = '/'
+  }
+
+  
+  createAndWriteOutput(mathOperator, currentValue, userInput);
+  writeToLog(type, currentValue, userInput, currenResult);
+}
+
+function add() {
+  calculateResult('ADD');
 }
 
 function subtract() {
-  const userInput = getUserInput();
-  const currentValue = currenResult;
-  currentCaculation = `${currenResult} - ${userInput}`;
-  currenResult -= userInput;
-
-  outputResult(currenResult, currentCaculation);
-  writeToLog('SUBTRACT', currentValue, userInput, currenResult);
+  calculateResult('SUBTRACT');
 }
 
 function multiply() {
-  const userInput = getUserInput();
-  const currentValue = currenResult;
-  currentCaculation = `${currenResult} * ${userInput}`;
-  currenResult *= userInput;
-
-  outputResult(currenResult, currentCaculation);
-  writeToLog('MMULTIPLY', currentValue, userInput, currenResult);
+  calculateResult('MULTIPLY');
 }
 
 function divide() {
-  const userInput = getUserInput();
-  const currentValue = currenResult;
-  currentCaculation = `${currenResult} / ${userInput}`;
-  currenResult /= userInput;
-
-  outputResult(currenResult, currentCaculation);
-  writeToLog('DIVIDE', currentValue, userInput, currenResult);
+  calculateResult('DIVIDE');
 }
 
 addBtn.addEventListener('click', add);
