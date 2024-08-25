@@ -2,7 +2,7 @@
 
 2. we can add it in head section or the body based on when we want to use the javascript code
 
-3. In case of multiple scripts add the scripts in order as the order matters
+3. In case of multiple scripts add the scripts in proper order as the order matters
 
 ```
 <head>
@@ -19,7 +19,7 @@
     a = 'aggarwal'
 ```
 
-5. A constant is a data container whenre value must not change
+5. A constant is a data container where value must not change
 
 ```
     const numberOfUsers = 10;
@@ -48,7 +48,7 @@
     - First way is used use '//' for single line comments
     - /\* \*/ for multi line comments
 
-15. Objects : for the key the colons are not important
+15. Objects : for the key the quotes are not important
     - We can have even functions as a value in object
     - Example
 
@@ -66,7 +66,7 @@
         example let a;
     - null: not a default value but we can set a variable to null
         example let a = null;
-    - NaN (Not a number): It is kind of an error when we are compting some number and user some non number value
+    - NaN (Not a number): It is kind of an error when we are computing some number and with some non number value
         example 3 * 'hello'      // NaN
     
 17. typeof is used to check the type of a variable

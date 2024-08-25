@@ -10,7 +10,7 @@
 
 4. It is a Dynamic language means it is not precompiled like Java, or C++. it is JIT compiled
 
-5. Weekly type means no need to declare the type of variable, So same variable can be assigned 2 different data types
+5. Weekly type means no need to declare the type of variable, So 2 different data type values can be assigned to a same variable
    example
 
 ```
@@ -23,3 +23,15 @@
 7. Javascript cannot access your local file system, interact with the operating system (when running on Browser)
 
 8. Javasfcript is based in ECMAscript. ECMAscript is managed by ECMA team. Javascript is most famous ECMAscript inplementation
+
+9. Arrow functions
+   - we need curly brackets when there is more than 1 line in the function body
+   - we dont need to add return keyword when there is only 1 line in the functional body
+
+```
+   const greet = () => console.log('greet');
+   
+```
+10. Things to check again
+   - Hoisting
+   - bind, call and apply
