@@ -170,5 +170,3 @@
     addition(printValue.bind(this, 'ADD'), 1,2,3,4);
 ```
    - As shown in the example printValue takes 2 arguments, 1 is passed by the bind value and second is passed in the addition fn.
-
-10. 

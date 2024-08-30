@@ -4,7 +4,7 @@
    - != is used for value not equal
    - === is used for value and type equality
    - !== value and type not equality
-   - > = greater that equal to
+   - >= greater that equal to
    - <= less than equal to
    - ! negate of any value
 
@@ -32,9 +32,13 @@
 - any string is considered as true
 - empty string is considered as false
 - all arrays and objects are considered as true even empty objects and arrays
-- null, Nan, undefined are considered as false
+- null, NaN, undefined are considered as false
 
 5. prompt() is like alert but it provides a dialog where you can enter something
+    - we can set a placeholder by passing the second argument
+```
+    const value = prompt('Enter a number', 30);
+```
 
 6. Some logical operator tricks
 
