@@ -30,7 +30,8 @@
 ```
 
 4. Hoisting
-   - function expression (function name() { ...}) get hoisted on top means they can be used beofre even their declaration in script
+   - function expression (function name() { ...}) get hoisted on top means they can be used before even their declaration in script
+   -  function statement (const name = function(){...}) get hoisted but without the initialization so we cannot use it before their declaration
 
 ```
     greet();            // works fine
@@ -40,9 +41,7 @@
     }
 
 ```
-
-    - function statement (const name = function(){...}) get hoisted but without the initialization so we cannot use it before their declaration
-
+Example 2
 ```
     greet();            // Error
 
@@ -169,4 +168,5 @@
 
     addition(printValue.bind(this, 'ADD'), 1,2,3,4);
 ```
+
    - As shown in the example printValue takes 2 arguments, 1 is passed by the bind value and second is passed in the addition fn.
