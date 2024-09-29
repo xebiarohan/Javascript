@@ -45,37 +45,37 @@
    console.dir(heading);
 ```
 
-4. Attributes are placed in HTML tags like id, class, value, etc where as properties are added automatically on the DOM object. Mostly they have 1-TO-1 mapping
+9. Attributes are placed in HTML tags like id, class, value, etc where as properties are added automatically on the DOM object. Mostly they have 1-TO-1 mapping
 
-5. To get the last Item using the querySelector
+10. To get the last Item using the querySelector
 
-   - const lastItem = document.querySelector('li:last-of-type');
-   - here last-of-type is a pseudo selector
+    - const lastItem = document.querySelector('li:last-of-type');
+    - here last-of-type is a pseudo selector
 
-6. Traversing the DOM
+11. Traversing the DOM
 
-   - We dont have to always get every element using the documet.querySelector or getElementBy...
-   - we can get 1 element Node and then check all its example children nodes, parent, ansestors and Descendants
-   - Child - Direct child node or element example <li> of <ul>
-   - Descendant - Direct or indirect child (includes child of child)
-   - Parent - Direct parent node or element
-   - Ancestor - Direct or indirect parent node or element
-   - We have other methods for siblings : previousSibling, previousElementSibling, nextSibling, nextElementSibling
+    - We dont have to always get every element using the documet.querySelector or getElementBy...
+    - we can get 1 element Node and then check all its example children nodes, parent, ansestors and Descendants
+    - Child - Direct child node or element example <li> of <ul>
+    - Descendant - Direct or indirect child (includes child of child)
+    - Parent - Direct parent node or element
+    - Ancestor - Direct or indirect parent node or element
+    - We have other methods for siblings : previousSibling, previousElementSibling, nextSibling, nextElementSibling
 
-7. Child Nodes
-   - Example  
-     const ul = document.querySelector('ul');
-     ul.children
-     ul.children[1] // to get the second child
-   - The empty spaces in the HTML is also treated as the nodes
-   - If we use children then it will not include these empty space nodes
-   - But if we use childNodes then they are also covered
-   - we can get the first/last nodes like
-     ul.childNodes
-     ul.firstChild
-     ul.firstElementChild
-     ul.lastChild
-     ul.lastElementChild
+12. Child Nodes
+    - Example  
+      const ul = document.querySelector('ul');
+      ul.children
+      ul.children[1] // to get the second child
+    - The empty spaces in the HTML is also treated as the nodes
+    - If we use children then it will not include these empty space nodes
+    - But if we use childNodes then they are also covered
+    - we can get the first/last nodes like
+      - ul.childNodes
+      - ul.firstChild
+      - ul.firstElementChild
+      - ul.lastChild
+      - ul.lastElementChild
 
 ```
     <ul>
@@ -84,9 +84,10 @@
     </ul>
 ```
 
-8. Parent Nodes
-   - A node can have exactly 1 parent node
-   - can be exacted using parentNode or parentElement
+13. Parent Nodes
+
+- A node can have exactly 1 parent node
+- can be exacted using parentNode or parentElement
 
 ```
     const li == document.querySelector('li');
@@ -94,20 +95,20 @@
     li.parentElement    // ul
 ```
 
-9. Sibling Nodes
+14. Sibling Nodes
 
-   - ul.previousSibling // it can also be a text node (empty space)
-   - ul.previousElementSibling // it provides the proper previous sibling
-   - ul.nextElementSibling // it provides the proper nexr sibling to <ul>
+- ul.previousSibling // it can also be a text node (empty space)
+- ul.previousElementSibling // it provides the proper previous sibling
+- ul.nextElementSibling // it provides the proper nexr sibling to <ul>
 
-10. Traversing DOM is faster than the querySelector
+15. Traversing DOM is faster than the querySelector
 
-11. Styling DOM elements
+16. Styling DOM elements
 
-- Using the style property (highest priority) - Directly targeting individual CSS styles
-- Via ClassName - Directly set the CSS classes assigned to the element
-- Via ClassList - Conveniently add, remove or toggle CSS classes
-- Example
+    - Using the style property (highest priority) - Directly targeting individual CSS styles
+    - Via ClassName - Directly set the CSS classes assigned to the element
+    - Via ClassList - Conveniently add, remove or toggle CSS classes
+    - Example
 
 ```
   const section = document.querySelector('selector');
@@ -134,22 +135,22 @@ Option 2 with ClassList
     section.classList.toggle('invisible');
 ```
 
-12. Creating and inserting elements
+17. Creating and inserting elements
 
-- Using HTML code inside java script
-- Using createElement() method
+    - Using HTML code inside java script
+    - Using createElement() method
 
-13. Adding element via HTML in code
+18. Adding element via HTML in code
 
-- let say we have a section with with multi line code
+    - let say we have a section with with multi line code
 
 ```
   const header = document.querySelector('section');
   header.innerHTML = '<h1> New title</h1>'
 ```
 
-- It will replace all the content of the section with this new title (not the text message but the HTML inside the section node)
-- If we want to keep the old one and just append a new HTML node with it
+    - It will replace all the content of the section with this new title (not the text message but the HTML inside the section node)
+    - If we want to keep the old one and just append a new HTML node with it
 
 ```
   const ul = document.querySelector('ul');
@@ -157,9 +158,9 @@ Option 2 with ClassList
 
 ```
 
-14. Creating element via createElement()
+19. Creating element via createElement()
 
-- let say we want to create a li in an ul
+    - let say we want to create a li in an ul
 
 ```
   const ul = document.querySelector('ul');
@@ -169,21 +170,21 @@ Option 2 with ClassList
 
 ```
 
-- we can also use append() instead of appendChild()
-- append() can takes a string value in case we want to append a string
-- we can pass multiple parameter to append multiple nodes in 1 like example
+    - we can also use append() instead of appendChild()
+    - append() can takes a string value in case we want to append a string
+    - we can pass multiple parameter to append multiple nodes in 1 like example
 
 ```
     ul.append(newLi1, newLi2);
 ```
 
-- If we want to insert it as a first element then we can use prepand
+    - If we want to insert it as a first element then we can use prepand
 
 ```
   ul.prepand(newLi);
 ```
 
-- we can insert items before or after any element node lile
+    - we can insert items before or after any element node lile
 
 ```
   ul.lastElementChild.before(newLi);
@@ -191,17 +192,20 @@ Option 2 with ClassList
   ul.firstElementChild.replaceWith(newLi3);
 ```
 
-15. Copy a element node
-  - li.copyNode(true)
-  - It takes a boolean that marks deep copy of node (with all the children nodes)
+20. Copy a element node
 
-16. Live node list and static Node list
-  - When we fetch a list of nodes using querySelector or querySelectorAll then it takes a snapshot of the Node list
-  - Any change in the DOM after fetching the list will not get refrect in the list (like list of li of an ul)
-  - But when we fetch using getElementsBy<Something> like getElementsByTagName(), it fetches the live list
-  - Any change in the DOM will be reflected on the list like change in the number of li of an ul.
+    - li.copyNode(true)
+    - It takes a boolean that marks deep copy of node (with all the children nodes)
 
-17. Removing elements
-  - There are 2 ways to remove items from the DOM
-  - list.remove(<NodeName>)
-  - ul.parentElement.removeChild(ul);
+21. Live node list and static Node list
+
+    - When we fetch a list of nodes using querySelector or querySelectorAll then it takes a snapshot of the Node list
+    - Any change in the DOM after fetching the list will not get refrect in the list (like list of li of an ul)
+    - But when we fetch using getElementsBy<Something> like getElementsByTagName(), it fetches the live list
+    - Any change in the DOM will be reflected on the list like change in the number of li of an ul.
+
+22. Removing elements
+
+    - There are 2 ways to remove items from the DOM
+    - list.remove(<NodeName>)
+    - ul.parentElement.removeChild(ul);
