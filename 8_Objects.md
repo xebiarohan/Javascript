@@ -30,7 +30,7 @@ const person = {
     delete person.age;
 ```
 
-3. If the property name is not a simple string like
+3. If the property name is not a simple string for example
    - first-name then we have to use it using single quotes
    - and accessing property is also changed to square brackets
 
@@ -44,7 +44,7 @@ const person = {
 
 4. Property Types and Property Order
 
-   - we can even assing number as a key example {1.5: 'hello'}
+   - we can use string, number and symbol as the key example {1.5: 'hello'}
    - order is maintained in which we add it
    - if all the keys are numbers then they get sorted
 
