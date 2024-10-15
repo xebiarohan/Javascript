@@ -46,7 +46,7 @@ class ProductItem {
    - Common to all the instances of the class
    - Defined with static keyword infront of that
    - No need to create an instance of class to access them
-   - Can we accessed using the name of the class
+   - Can be accessed using the name of the class
 
 ```
 class App {
@@ -122,11 +122,11 @@ OR
 Object.getOwnPropertyDescriptor(person, 'name');
 
 
-Object.getOwnPropertyDescriptor(person, 'name'), {
+Object.defineProperty(person, 'name', {
     configurable: true,
     enumerable: true,
     value: person.value,
     writable: false
-};
+});
 
 ```
